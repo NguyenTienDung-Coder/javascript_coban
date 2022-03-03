@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/js/main.js"></script>
+</head>
+<body>
+    <script>
+        function findLongestWord(stringA){
+            let arrayA = stringA.match(/\w[a-z]{0,}/gi);
+            let result = arrayA[0];
+                for(let x = 1 ; x < arrayA.length ; x++){
+                    if(result.length < arrayA[x].length){
+                        result = arrayA[x];
+                    } 
+                }   
+                return result;
+        }
+        document.write(findLongestWord('công ty cổ phần rikkeisoft'));
+    </script>
+</body>
+</html>
